@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "daad47f0-94b7-4e9a-9981-ce5d6ee0a4bc",
+		"name": "GitHub GraphQL API",
+		"description": "This is a Postman collection of GitHub GraphQL API v4.0 .\r\n\r\nGitHub GraphQL API Documentation - https://developer.github.com/v4/\r\n\r\nGitHub GraphQL API EXplorer-https://developer.github.com/v4/explorer/ .\r\nThis is useful in contructing the api request in postman\r\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetUserDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{ \r\n viewer\r\n {\r\n     login\r\n     name\r\n     bio\r\n     url\r\n     location\r\n }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{baseURI}}/graphql",
+					"host": [
+						"{{baseURI}}"
+					],
+					"path": [
+						"graphql"
+					]
+				},
+				"description": "Github GraphQL API to get user info"
+			},
+			"response": []
+		},
+		{
+			"name": "GetFollowers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\r\n  viewer {\r\n    login\r\n    followers(first: 10) {\r\n      nodes {\r\n        login\r\n        name\r\n      }\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{baseURI}}/graphql",
+					"host": [
+						"{{baseURI}}"
+					],
+					"path": [
+						"graphql"
+					]
+				},
+				"description": "Github GraphQL API to get user info"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{auth_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "098e0f97-a119-410e-9c94-1bfa3ec70c19",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b34be273-d2ad-4033-947f-c9d2185bf072",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b99e9ccc-12b0-4313-9111-8a63f52b8ed5",
+			"key": "baseURI",
+			"value": "https://api.github.com",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
