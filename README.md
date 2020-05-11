@@ -46,9 +46,7 @@ Step 6 :You can execute the api request through postman or using newman.
 * Postman [https://www.postman.com/downloads/] - Client tool for testing APIs.
 
 
-## Author
 
-* **Vasant Verma** -(https://github.com/vasantverma)
 
 
 
