@@ -29,7 +29,7 @@ Step 2 : Import the Postman collection file in Postman.
 
 Step 3 : Import the Postman enviroment file in Postman.
 
-Step 4 : Enter your API KEY in api_key environment variable.
+Step 4 : Enter your API KEY in auth_token environment variable.
 
 Step 5 :Add the GitHub GraphQL schema in postman.
 
