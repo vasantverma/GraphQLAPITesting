@@ -18,6 +18,7 @@ GitHub has exposed both REST API and GraphQL API for all the users.Both can be u
 Using GitHUb GraphQL API, a single endpoint is used to query all the informations of a github user. The client needs to specify the data which he wants from the github server in a graphql query and only the requested data is returned by the server.
 
 Documentation of GitHub GraphQL API can be found at https://developer.github.com/v4/ .
+
 Sample video for testing GitHub GraphQL API in postman- https://www.youtube.com/watch?v=GLdcIXjkb7k .
 
 ## Getting Started
